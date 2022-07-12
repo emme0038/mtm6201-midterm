@@ -131,7 +131,7 @@ p {
     }
 
     nav li a {
-        font-family: "YoungSerif"
+        font-family: "YoungSerif";
             list-style-type: none;
         text-decoration: none;
         color: white;
@@ -154,6 +154,17 @@ p {
         text-decoration-style: none;
         text-decoration-color: white;
     }
+    
+    button{
+        font-family: "YoungSerif";
+        transition: 0.5s;
+    }
+
+    button:hover{
+        margin: 2em;
+        transition: 0.5s;
+    }
+
 
     a:visited {
         color: white;
@@ -185,10 +196,6 @@ p {
         background-color: #525252;
         color: white;
     }
-
-    .events img{
-    }
-
 
     .questions {
         text-align: center;
@@ -273,8 +280,7 @@ p {
     }
 
     img {
-        width: 25%;
-        height: auto;
+        width: 100%;
         display: block;
     }
 
@@ -283,7 +289,7 @@ p {
     header {
         color: white;
         background-color: #F78154;
-        justify-content: center;
+        text-align: center;
     }
 
     nav li {
@@ -293,7 +299,7 @@ p {
         display: inline-flex;
         flex-direction: row;
         float: inline-start;
-        margin-right: 3em;
+        margin-right: 2em;
         margin-bottom: 3em;
         font-size: 24px;
         position: relative;
