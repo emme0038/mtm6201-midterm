@@ -1,11 +1,16 @@
 @font-face {
     font-family: "YoungSerif";
-    src: url(/fonts/young-serif/YoungSerif-Regular.otf);
+    src: url(fonts/young-serif/YoungSerif-Regular.otf);
 }
 
 @font-face {
     font-family: "Piazzolla";
-    src: url(/fonts/piazzolla/Piazzolla-Regular.otf);
+    src: url(fonts/piazzolla/Piazzolla-Regular.otf);
+}
+
+@font-face{
+    font-family: "ZillaSlab";
+    src: url(fonts/zilla-slab/ZillaSlab-Medium.ttf);
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -67,14 +72,11 @@ table {
 h1 {
     font-family: "YoungSerif";
     font-size: 56px;
-    text-shadow: #525252;
-    padding: 0.5em;
 }
 
 h2 {
-    font-family: "YoungSerif";
+    font-family: "ZillaSlab";
     font-size: 48px;
-    padding: 0.5em;
 }
 
 h3 {
@@ -90,10 +92,8 @@ p {
 
 .kevinandbonnie img, .vision img{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    border-radius: 100px;
+    border-radius: 100%;
+    width: 50%;
 }
 
 .map img{
@@ -103,7 +103,6 @@ p {
 
 .pastevents img{
     display: block;
-
 }
 
 @media screen and (max-width: 960px) {
@@ -127,7 +126,7 @@ p {
     header {
         color: white;
         background-color: #F78154;
-        justify-content: center;
+
     }
 
     nav li a {
@@ -195,6 +194,7 @@ p {
     .events {
         background-color: #525252;
         color: white;
+        text-align: center;
     }
 
     .questions {
@@ -256,8 +256,8 @@ p {
 .services {
     background-color: #525252;
     color: white;
-    padding-bottom: 2em;
 }
+
 
 .events .services img {
     border-radius: 100px;
@@ -266,12 +266,13 @@ p {
 @media screen and (min-width: 960px) {
 
     body {
-        background-image: url(/images/background.jpeg)
+        background-image: url(/images/background.jpeg);
+        margin: 0 auto;
     }
 
     .container {
-        width: 90%;
         margin: 0 auto;
+        width: 90%;
         display: flex;
         flex-direction: column;
         background-color: white;
@@ -289,34 +290,37 @@ p {
     header {
         color: white;
         background-color: #F78154;
-        text-align: center;
+    }
+
+    nav{
+        display: flex;
+
     }
 
     nav li {
-        list-style-type: none;
+        font-family: "YoungSerif";
+            list-style-type: none;
         text-decoration: none;
         color: white;
-        display: inline-flex;
+        display: flex;
         flex-direction: row;
-        float: inline-start;
-        margin-right: 2em;
-        margin-bottom: 3em;
-        font-size: 24px;
-        position: relative;
+        margin: 0 auto;
+        padding: 0 auto;
+        transition: 0.5s;
     }
-
-    nav ul li a {
+        
+    ul li a {
+        font-style: "YoungSerif";
         text-decoration-style: none;
         text-decoration: none;
+        color: white;
+        transition: 1s;
     }
 
     nav ul li a:hover {
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-        transition: 0.5s;
+        transition: 1s;
         font-size: 1.5em;
         color: white;
-        text-align: center;
     }
 
     a:visited {
@@ -325,7 +329,8 @@ p {
 
     nav ul li img {
         width: 25%;
-        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
         justify-content: center;
         align-items: center;
     }
@@ -435,5 +440,29 @@ p {
 }
 
 .events .services img {
+    width: 25%;
     border-radius: 100px;
 }
+
+.kevinandbonnie h2 p {
+}
+
+.vision h2 p{
+    text-align: right;
+}
+
+.kevinandbonnie img{
+    display: block;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vision img{
+    width: 25%;
+    height: 25%;
+    display: block;
+    float: right;
+    position: relative;
+}
+
