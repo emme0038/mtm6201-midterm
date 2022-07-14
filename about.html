@@ -15,7 +15,9 @@
         <header>
             <nav role="navigation">
                 <ul>
+                    <!-- Site Logo -->
                     <li><img src="images/wildwoodlogo.svg" alt="wildwood logo" width="50"></li>
+                    <!-- Site Logo -->
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="events.html">Events</a></li>
@@ -28,11 +30,16 @@
 
 
         <section class="aboutbanner" role="banner">
-            <img src="images/aboutbanner.jpeg" alt="tree background">
+            <!--responsive resizing for aboutbanner -->
+            <img srcset="/images/derivv/aboutbanner-derivatives/about512.jpg 512w, /images/derivv/aboutbanner-derivatives/about1024.jpg 1024w"
+            sizes="(max-width:960px) 512w, (min-width:960px) 1024w"
+            src="/images/derivv/aboutbanner-derivatives/about512.jpg" 
+            alt="tree background">
             <h1>About</h1>
         </section>
         <div class="about">
             <section class="kevinandbonnie" role="About kevin and bonnie">
+                <!-- responsive resize for kevinandbonnie -->
                 <img srcset="images/derivv/kevinandbonnie-derivatives/kevinandbonnie512.jpg 512w, 
                 images/derivv/kevinandbonnie-derivatives/kevinandbonnie1024.jpg 1024w"
                 sizes="(max-width: 960px) 512w,
@@ -72,7 +79,7 @@
         </section>
 
         <section class="aboutevents">
-            <img src="images/currentevents.jpeg" alt="man playing guitar for people around campfire">
+            <img src="images/ourevents.jpeg" alt="man playing guitar for people around campfire">
             <h2>Our Events</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor incididunt ut
                 labore et
