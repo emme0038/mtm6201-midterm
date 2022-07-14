@@ -108,7 +108,7 @@ button:hover {
 }
 
 /* setting max-width so images aren't too large when working with them */
-img{
+img {
     max-width: 100%;
 }
 
@@ -128,14 +128,16 @@ img{
 }
 
 /* hovering in place, animation keyframes for "LIVE" button events page */
-@keyframes hovering{
-    0%{
-        transform:scale(1)
+@keyframes hovering {
+    0% {
+        transform: scale(1)
     }
-    50%{
+
+    50% {
         transform: scale(1.25)
     }
-    100%{
+
+    100% {
         transform: scale(1)
     }
 
@@ -143,23 +145,23 @@ img{
 
 /* translucent perform button on events page */
 .perform button {
-    background:none;
+    background: none;
     border: 1px solid #F78154;
     color: white;
 }
 
 /* Adds microphone background image and a text-shadow to improve contrast */
-.perform{
+.perform {
     color: white;
     display: block;
-    background-image: url(/images/perform.jpeg);
+    background-image: url(images/perform.jpeg);
     text-shadow: 1px 1px 5px black;
     background-size: cover;
     background-position: 100px;
 }
 
 /* shows past events in a row that wraps when resizing */
-.pastevents{
+.pastevents {
     background-color: #525252;
     color: white;
     display: flex;
@@ -204,7 +206,7 @@ img{
     }
 
     /* sets past events to square aspect ratio */
-    .pastevents img{
+    .pastevents img {
         width: 512px;
         height: 512px;
         object-fit: cover;
@@ -328,7 +330,7 @@ img{
 
     /* setting wooden background texture */
     body {
-        background-image: url(/images/background.jpeg);
+        background-image: url(images/background.jpeg);
     }
 
     /* setting global display properties for >960px, width of 90% to show background texture consistently when resizing */
@@ -342,7 +344,7 @@ img{
         display: block;
     }
 
-    h1{
+    h1 {
         text-align: center;
     }
 
@@ -357,7 +359,7 @@ img{
     nav {
         display: flex;
     }
-    
+
     nav ul li {
         font-family: "YoungSerif";
         font-size: 24px;
@@ -371,7 +373,7 @@ img{
         transition: 1s;
     }
 
-    nav ul li a{
+    nav ul li a {
         transition: 1s;
     }
 
@@ -459,7 +461,7 @@ img{
     }
 
 
-    .vision{
+    .vision {
         text-align: center;
     }
 
@@ -467,44 +469,44 @@ img{
         text-align: center;
     }
 
-    .comingsoon h2{
+    .comingsoon h2 {
         display: block;
     }
 
     /* sets square aspect ratio for images */
-    .pastevents img{
+    .pastevents img {
         width: 256px;
         height: 256px;
         object-fit: cover;
-        margin: 1em; 
+        margin: 1em;
         display: flex;
     }
 
     /* sets acts coming soon to display horizontally and wrap when resizing */
-    .comingsoon{
+    .comingsoon {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
-    
-    .happeningnow{
+
+    .happeningnow {
         text-align: center;
     }
 
     /* customizes button sizes for desktop */
-    .happeningnow button{
+    .happeningnow button {
         width: 200px;
         height: 50px;
         font-size: 12px;
     }
 
-    .comingsoon button{
+    .comingsoon button {
         width: 200px;
         height: 50px;
         font-size: 12px;
     }
 
-    .mainevents img{
+    .mainevents img {
         width: 35%;
         margin-left: auto;
         margin-right: auto;
@@ -519,30 +521,32 @@ img{
         text-align: center;
     }
 
-    .michaeljones, .brodiemitchell, .potluck{
+    .michaeljones,
+    .brodiemitchell,
+    .potluck {
         margin-right: auto;
         margin-left: auto;
     }
 
-    .events img{
-        width:500px;
+    .events img {
+        width: 500px;
         height: 300px;
         margin: 1em;
         object-fit: cover;
         display: flex;
     }
 
-    .events{
+    .events {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
 
-    .booking{
+    .booking {
         text-align: center;
     }
 
-    .aboutevents{
+    .aboutevents {
         display: flex;
         flex-direction: column;
     }
