@@ -1,16 +1,12 @@
+/* Linking fonts */
 @font-face {
     font-family: "YoungSerif";
-    src: url(fonts/young-serif/YoungSerif-Regular.otf);
+    src: url(/fonts/young-serif/YoungSerif-Regular.otf);
 }
 
 @font-face {
-    font-family: "Piazzolla";
-    src: url(fonts/piazzolla/Piazzolla-Regular.otf);
-}
-
-@font-face{
     font-family: "ZillaSlab";
-    src: url(fonts/zilla-slab/ZillaSlab-Medium.ttf);
+    src: url(/fonts/zilla-slab/ZillaSlab-Medium.ttf);
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -69,13 +65,14 @@ table {
 
 /* CSS code */
 
+/* Linking fonts to headings and paragraphs */
 h1 {
     font-family: "YoungSerif";
     font-size: 56px;
 }
 
 h2 {
-    font-family: "ZillaSlab";
+    font-family: "YoungSerif";
     font-size: 48px;
 }
 
@@ -89,23 +86,94 @@ p {
     font-size: 18px;
 }
 
-
-.kevinandbonnie img, .vision img{
-    display: block;
-    border-radius: 100%;
-    width: 50%;
+/* main button properties */
+button {
+    font-family: "YoungSerif";
+    transition: 0.5s;
+    background-color: #F78154;
+    font-size: 36px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 10em;
+    height: 2em;
+    transition: 0.5s;
+    margin: 1em;
+    cursor: pointer;
 }
 
-.map img{
-    display: block;
+/* button transition */
+button:hover {
+    font-size: 40px;
+    transition: .5s;
+}
+
+img{
     width: 100%;
 }
+/* button properties for different sections */
+.comingsoon button {
+    background-color: white;
+    border: 1px solid green;
+    color: green;
+}
 
-.pastevents img{
+
+.happeningnow button {
+    background-color: white;
+    border: 1px solid red;
+    color: red;
+    animation: hovering 3s infinite ease-in-out;
+}
+
+@keyframes hovering{
+    0%{
+        transform:scale(1)
+    }
+    50%{
+        transform: scale(1.25)
+    }
+    100%{
+        transform: scale(1)
+    }
+
+}
+
+.perform button {
+    background:none;
+    border: 1px solid #F78154;
+    color: white;
+}
+
+.perform{
+    color: white;
     display: block;
+    background-image: url(/images/perform.jpeg);
+    text-shadow: 1px 1px 5px black;
+    background-size: cover;
+    background-position: 100px;
+}
+
+.pastevents{
+    background-color: #525252;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.kevinandbonnie img {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    grid-area: kevinandbonnieimg;
 }
 
 @media screen and (max-width: 960px) {
+
+    /* global display settings for mobile */
 
     .container {
         display: flex;
@@ -113,6 +181,7 @@ p {
         text-align: center;
         max-width: 960px;
         position: relative;
+        text-align: center;
     }
 
     img {
@@ -123,15 +192,17 @@ p {
 
     /* navigation bar */
 
+    /* Header background and text colours */
     header {
         color: white;
         background-color: #F78154;
 
     }
 
+    /* Nav links properties */
     nav li a {
         font-family: "YoungSerif";
-            list-style-type: none;
+        list-style-type: none;
         text-decoration: none;
         color: white;
         display: flex;
@@ -142,61 +213,61 @@ p {
         align-content: center;
     }
 
+    /* Hover animation makes text bigger during hover */
     nav ul li a:hover {
         transition: 0.5s;
         font-size: 1.5em;
-        color: white;
     }
 
+    /* Removes text decoration for links */
     a {
         text-decoration: none;
-        text-decoration-style: none;
         text-decoration-color: white;
     }
-    
-    button{
-        font-family: "YoungSerif";
-        transition: 0.5s;
-    }
-
-    button:hover{
-        margin: 2em;
-        transition: 0.5s;
-    }
 
 
+
+
+
+
+    /* visited links stay the color white */
     a:visited {
         color: white;
     }
 
+    /* website logo */
     nav ul li img {
-        display: block;
-        justify-content: center;
+        display: inline-block;
+        width: 5%;
     }
 
+    /* Welcome text centered and set to center of backgroundimage */
     .welcome {
         position: relative;
         text-align: center;
         color: white;
         bottom: 18em;
-        box-shadow: 1px solid black;
     }
 
+    /* center align main text, move up */
     main {
         text-align: center;
         margin-top: -10em;
     }
 
+    /* setting main H2 to orange */
     main h2 {
         color: #F78154;
     }
 
+    /* changing background colour of events section */
     .events {
         background-color: #525252;
         color: white;
         text-align: center;
     }
 
+    /* aligning buttons and text inside questions section */
     .questions {
         text-align: center;
         display: flex;
@@ -205,84 +276,67 @@ p {
         align-items: center;
     }
 
+    /* changing questions heading to orange */
     .questions h3 {
         color: #F78154;
     }
 
+    /* changing heading to orange, aligning to center */
     .goodbye {
         text-align: center;
         color: #F78154;
     }
 
+    /* footer background and text color */
     footer {
         background-color: #F78154;
         color: white;
     }
 
-    button {
-        background-color: #F78154;
-        font-size: 36px;
+
+    /* setting background colours for map, aboutevents, services */
+    .map,
+    .aboutevents,
+    .services {
+        background-color: #525252;
         color: white;
-        border: none;
-        border-radius: 10px;
-        width: 10em;
-        height: 3em;
-        gap: 1em;
-        transition: 0.5s;
-        margin: 2em;
     }
 
-    .comingsoon button {
-        background-color: white;
-        border: 1px solid green;
-        color: green
+    /* rounding images in events and services section */
+    .events .services img {
+        border-radius: 100px;
     }
 }
 
-.happeningnow button {
-    background-color: white;
-    border: 1px solid red;
-    color: red;
-}
-
-.perform button {
-    background-color: white;
-    border: 1px solid #F78154;
-    color: #F78154;
-}
-
-.map,
-.aboutevents,
-.services {
-    background-color: #525252;
-    color: white;
-}
-
-
-.events .services img {
-    border-radius: 100px;
-}
-
+/* end of <960px */
 @media screen and (min-width: 960px) {
 
+    /* setting wooden background texture */
     body {
         background-image: url(/images/background.jpeg);
-        margin: 0 auto;
     }
 
+    /* setting global display properties for >960px */
     .container {
         margin: 0 auto;
         width: 90%;
-        display: flex;
-        flex-direction: column;
         background-color: white;
         max-width: 1920px;
-        text-align: center;
     }
 
     img {
-        width: 100%;
+    }
+
+    .events img {
         display: block;
+        width: 25%;
+    }
+
+    .aboutbanner img {
+        display: block;
+        width: 100%;
+        height: 25%;
+        object-fit: contain;
     }
 
     /* navigation bar */
@@ -292,29 +346,27 @@ p {
         background-color: #F78154;
     }
 
-    nav{
+    nav {
         display: flex;
-
     }
 
-    nav li {
+    nav ul li {
         font-family: "YoungSerif";
-            list-style-type: none;
+        list-style-type: none;
         text-decoration: none;
         color: white;
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
-        margin: 0 auto;
-        padding: 0 auto;
+        margin-right: 2em;
         transition: 0.5s;
     }
-        
+
     ul li a {
-        font-style: "YoungSerif";
-        text-decoration-style: none;
+        font-family: "YoungSerif";
         text-decoration: none;
         color: white;
         transition: 1s;
+        display: flex;
     }
 
     nav ul li a:hover {
@@ -340,10 +392,9 @@ p {
         text-align: center;
         color: white;
         bottom: 18em;
-        box-shadow: 1px solid black;
     }
-    
-    .banner img{
+
+    .banner img {
         width: 100%;
     }
 
@@ -357,25 +408,10 @@ p {
     }
 
     .events {
-        margin-top: 1em;
-        margin-bottom: 1em;
+        margin-top: 3em;
         background-color: #525252;
         color: white;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
     }
-
-    .eventimg {
-        float: left;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .events button {
-        display: block;
-    }
-
 
     .questions {
         text-align: center;
@@ -395,74 +431,108 @@ p {
         color: white;
     }
 
-    button {
-        background-color: #F78154;
-        font-size: 36px;
-        color: white;
-        border: none;
-        border-radius: 10px;
-        width: 10em;
-        height: 3em;
-        gap: 1em;
-        transition: 0.5s;
-        margin: 2em;
-    }
-
-    button a {
+    a {
         text-decoration: none;
+        color: white;
     }
 
-    .comingsoon button {
-        background-color: white;
-        border: 1px solid green;
-        color: green
+    .map,
+    .aboutevents,
+    .services {
+        background-color: #525252;
+        color: white;
+        padding-bottom: 2em;
     }
-}
 
-.happeningnow button {
-    background-color: white;
-    border: 1px solid red;
-    color: red;
-}
+    .events .services img {
+        width: 25%;
+        border-radius: 100px;
+    }
 
-.perform button {
-    background-color: white;
-    border: 1px solid #F78154;
-    color: #F78154;
-}
 
-.map,
-.aboutevents,
-.services {
-    background-color: #525252;
-    color: white;
-    padding-bottom: 2em;
-}
+    .vision img {
+        width: 25%;
+        display: block;
+        grid-area: visionimg;
+    }
 
-.events .services img {
-    width: 25%;
-    border-radius: 100px;
-}
+    .kevinandbonnie {
+        text-align: center;
+    }
 
-.kevinandbonnie h2 p {
-}
+    .vision {
+        grid-area: vision;
+    }
 
-.vision h2 p{
-    text-align: right;
-}
+    .about {
+    }
 
-.kevinandbonnie img{
-    display: block;
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .comingsoon h2{
+        display: block;
+    }
 
-.vision img{
-    width: 25%;
-    height: 25%;
-    display: block;
-    float: right;
-    position: relative;
-}
+    .pastevents img{
+        width: 256px;
+        height: 256px;
+        object-fit: cover;
+        margin: 1em; 
+        display: flex;
+    }
 
+    .comingsoon{
+        grid-area: comingsoon;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .happeningnow{
+        text-align: center;
+    }
+
+    .happeningnow button{
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .comingsoon button{
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .mainevents img{
+        width: 35%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mainevents {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .michaeljones, .brodiemitchell, .potluck{
+        margin-right: 2em;
+        margin-left: 2em;
+    }
+
+    .eventsimg{
+        display: block;
+        float: left;
+    }
+
+    .events{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .booking{
+        text-align: center;
+    }
+
+}

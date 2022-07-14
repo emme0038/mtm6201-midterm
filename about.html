@@ -6,33 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildwood Campground</title>
+    <!-- Linking CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="about">
-            <header>
-                <nav>
-                    <ul>
-                        <li><img src="images/wildwoodlogo.svg" alt="wildwood logo" width="50"></li>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Booking</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
+        <header>
+            <nav role="navigation">
+                <ul>
+                    <li><img src="images/wildwoodlogo.svg" alt="wildwood logo" width="50"></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="#">Booking</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-            <section class="aboutbanner">
-                <img src="images/aboutbanner.jpeg" alt="tree background">
-                <h1>About</h1>
-            </section>
-            <section class="kevinandbonnie">
+
+        <section class="aboutbanner" role="banner">
+            <img src="images/aboutbanner.jpeg" alt="tree background">
+            <h1>About</h1>
+        </section>
+        <div class="about">
+            <section class="kevinandbonnie" role="About kevin and bonnie">
+                <img srcset="images/derivv/kevinandbonnie-derivatives/kevinandbonnie512.jpg 512w, 
+                images/derivv/kevinandbonnie-derivatives/kevinandbonnie1024.jpg 1024w"
+                sizes="(max-width: 960px) 512w,
+                (min-width: 960px) 1024w"
+                src="images/derivv/kevinandbonnie-derivatives/kevinandbonnie512.jpg"
+                 alt="Kevin and Bonnie Fisher">
                 <h2>Kevin and Bonnie Fisher</h2>
-                <img src="images/kevinandbonnie.jpeg" alt="Kevin and Bonnie Fisher">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore roipi magna aliqua. Ut enim ad minim veeniam, quis nostruklad exercitation ullamco
                     laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in tufpoy
@@ -42,8 +49,10 @@
                     laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in tufpoy
                     voluptate velit esse cillum dolore eu fugiat nulla parieratur. Excepteur sint occaecat cupidatat.
                 </p>
+
             </section>
-            <section class="vision">
+            <section class="vision" role="Our vision">
+                <img src="images/vision.jpeg" alt="our vision, tent looking up at nightsky">
                 <h2>Our Vision</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore roipi magna aliqua. Ut enim ad minim veeniam, quis nostruklad exercitation ullamco
@@ -55,45 +64,43 @@
                     voluptate velit esse cillum dolore eu fugiat nulla parieratur. Excepteur sint occaecat cupidatat.
                 </p>
             </section>
-
-            <section class="map">
-                <h2>Site Map</h2>
-                <img src="images/sitemap.jpeg" alt="site map">
-            </section>
-
-            <section class="aboutevents">
-                <img src="images/currentevents.jpeg" alt="man playing guitar for people around campfire">
-                <h2>Our Events</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor incididunt ut
-                    labore et
-                    dolore roipi magna aliqua. Ut enim ad minim veeniam, quis nostruklad exercitation ullamco laboris
-                    nisi
-                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in tufpoy voluptate velit
-                    esse cillum.</p>
-                <button><a href="events.html">Events</a></button>
-            </section>
-
-            <section class="services">
-                <img src="images/services.jpeg" alt="two people hugging at a gathering">
-                <h2>Services</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor incididunt ut
-                    labore et
-                    dolore roipi magna aliqua. Ut enim ad minim veeniam, quis nostruklad exercitation ullamco laboris
-                    nisi
-                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in tufpoy voluptate velit
-                    esse cillum dolore eu fugiat nulla parieratur. Excepteur sint occaecat cupidatat. </p>
-            </section>
         </div>
+        
+        <section class="map">
+            <h2>Site Map</h2>
+            <img src="images/sitemap.jpeg" alt="site map">
+        </section>
 
-        <footer>
-            <div class="copyright">
-                <p>Copyright Wildwood 2022</p>
-                </div>
-                <div class="address">
-                <ul>
+        <section class="aboutevents">
+            <img src="images/currentevents.jpeg" alt="man playing guitar for people around campfire">
+            <h2>Our Events</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor incididunt ut
+                labore et
+                dolore roipi magna aliqua. Ut enim ad minim veeniam, quis nostruklad exercitation ullamco laboris
+                nisi
+                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in tufpoy voluptate velit
+                esse cillum.</p>
+            <button role="click to view events">Events</button>
+        </section>
+
+        <section class="services">
+            <img src="images/services.jpeg" alt="two people hugging at a gathering">
+            <h2>Services</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor incididunt ut
+                labore et
+                dolore roipi magna aliqua. Ut enim ad minim veeniam, quis nostruklad exercitation ullamco laboris
+                nisi
+                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in tufpoy voluptate velit
+                esse cillum dolore eu fugiat nulla parieratur. Excepteur sint occaecat cupidatat. </p>
+        </section>
+    </div>
+
+    <footer>
+            <p>Copyright Wildwood 2022</p>
+            <ul>
                 <li>9197 Country Rd #44</li>
                 <li>Oxford Station, ON</li>
                 <li>K0G 1T0</li>
                 <li>(613) 258 2940</li>
-                </ul>
-        </footer>
+            </ul>
+    </footer>

@@ -6,44 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildwood Campground</title>
+    <!-- Linking CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
+<!-- Start -->
 <body>
+    <!-- Main container -->
     <div class="container">
+        <!-- Navigation -->
         <header>
             <nav>
                 <ul>
-                    <li><img src="images/wildwoodlogo.svg" alt="wildwood logo" width="50"></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Booking</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><img src="images/wildwoodlogo.svg" alt="wildwood logo" width="50" aria-label="wildwood logo"></li>
+                    <li><a href="index.html" aria-label="home">Home</a></li>
+                    <li><a href="about.html" aria-label="about">About</a></li>
+                    <li><a href="events.html" aria-label="events">Events</a></li>
+                    <li><a href="#" aria-label="booking">Booking</a></li>
+                    <li><a href="#" aria-label="FAQ">FAQ</a></li>
+                    <li><a href="#" aria-label="Contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
         
-        <section class="banner">
+        <!-- Welcome Banner -->
+        <section class="banner" role="banner">
             <div class="bannerimg">
-                    <img 
-                    src="images/derivv/welcomebanner-derivatives/welcomebanner-1600_x_1067.jpeg">
+                <img 
+                srcset="images/derivv/welcomebanner-derivatives/welcomebanner-400_x_266.jpeg 400w, 
+                images/derivv/welcomebanner-derivatives/welcomebanner-800_x_533.jpeg 800w,
+                images/derivv/welcomebanner-derivatives/welcomebanner-1600_x_1067.jpeg 1600w"
+                sizes="(max-width: 400px) 400w,
+                (max-width: 800px) 800w,
+                (max-width: 1600px) 1600w"
+                src=“images/derivv/welcomebanner-derivatives/welcomebanner-800_x_533.jpeg”
+                alt="Welcome Banner">
             </div>
             <div class="welcome">
             <h1>Welcome</h1>
             </div>
-        </section class="banner">
+        </section>
         
+        <!-- Tagline and Main Content -->
         <main>
             <h2>Relaxation is closer than you think.</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore roipi magna aliqua. Ut enim ad minim veeniam, quis nostruklad exercitation ullamco laboris nisi
                 ut.
             </p>
-            <button><a href="about.html">Learn More</a></button>
+            <button aria-label="learn more">Learn More</button>
         </main>
         
+        <!-- Events section -->
         <section class="events">
             <div class="eventimg">
                 <img src="images/currentevents.jpeg" alt="group sitting around a campfire">
@@ -52,9 +66,10 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore roipi magna aliqua. Ut enim ad minim veeniam, quis nostruklad exercitation ullamco laboris nisi
                 ut aliquip ex ea commodo consequat. </p>
-                <button><a href="events.html">Event List</a></button>
+                <button aria-label="click here to viewa list of events">Event List</button>
         </section>
 
+        <!-- Booking Section -->
         <section class="booking">
             <div class="bookingimg">
                 <img src="images/booking.jpeg" alt="marshmallows cooking on a fire">
@@ -62,20 +77,23 @@
             <div class="bookingcontent">
             <h3>Your getaway awaits.</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-            <button>Book Now</button>
+            <button aria-label="booknow">Book Now</button>
         </div>
         </section>
 
-        <section class="questions"> 
+        <!-- Questions and Concerns -->
+        <section class="questions">
         <h3>Need accomodations or have questions?</h3>
-        <button>Contact</button>
-        <button>FAQ</button>
+        <button aria-label="contact">Contact</button>
+        <button aria-label="FAQ">FAQ</button>
         </section>
 
+        <!-- Farewell -->
         <section class="goodbye">
             <h2>We look forward to seeing you!</h2>
         </section>
 
+        <!-- Footer (add schema) -->
         <footer>
             <div class="copyright">
             <p>Copyright Wildwood 2022</p>
@@ -89,9 +107,6 @@
             </ul>
         </div>
         </footer>
-
-
-    </div>
+        </div>
 </body>
-
 </html>
